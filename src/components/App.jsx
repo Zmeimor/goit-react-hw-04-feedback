@@ -1,4 +1,3 @@
-
 import React from 'react';
 import  {useState}  from 'react';
 import Section from './Section/section'; 
@@ -11,27 +10,19 @@ import Notification from './Notification/Notification';
 	const [good, setGood]= useState(0);
 	const [neutral, setNeutral]= useState(0);
 	const [bad, setBad]= useState(0);
-	// state = {
-	// 	good: 0,
-	// 	neutral: 0,
-	// 	bad: 0
 	
-
 	const countTotalFeedback = () => {
-		// const { good, neutral, bad } = this.state;
 		const result = good + neutral + bad;
 		return result;
 	};
 
 	const countPositiveFeedbackPercentage = () => {
 		const result = countTotalFeedback();
-		// const { good } = this.state;
 		const percentage = (good * 100) / result;
 		return Math.round(percentage);
 	};
 
 	const onLeaveFeedback = (e) => {
-		// const { good, neutral, bad } = this.state;
 		console.log(e);
 		
 		const name = e.target.name;
@@ -50,15 +41,7 @@ import Notification from './Notification/Notification';
 		if (name === 'bad' ) 
 		{setBad(bad+1);
 		}
-		
-		
-		
-		// this.setState((prevState) => ({
-		// 	[name]: prevState[name] + 1
-		// }));
 }
-	// render() {
-	// 	const { good, neutral, bad } = this.state;
 		const total = countTotalFeedback();
 		const positivePercentage = countPositiveFeedbackPercentage();
 
