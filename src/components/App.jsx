@@ -26,11 +26,9 @@ import Notification from './Notification/Notification';
 		console.log(e);
 		
 		const name = e.target.name;
-		console.log(good);
 		if (name === 'good' ) 
 		 {
 			setGood(good+1);
-			console.log(good);
 		}
 		else 
 		if (name === 'neutral' )
